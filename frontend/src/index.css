@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Prata&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+a.active hr{
+    display: block;
+}
+
+*{
+    font-family: Outfit;
+}
+
+.prata-regular {
+    font-family: "Prata", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  ::-webkit-scrollbar{
+    display: none;
+  }
+ /* Basic Styling for the logo */
+.logo {
+  font-family: 'Playfair Display', serif; /* Elegant and luxurious font */
+  font-weight: 700;
+  font-size: 24px; /* Keeping size unchanged */
+  color: transparent;
+  background: linear-gradient(45deg, #D4AF37, #F1C40F, #E5C100); /* Soft gold gradient */
+  background-clip: text;
+  -webkit-background-clip: text;
+  text-decoration: none;
+  letter-spacing: 1.5px; /* Elegant spacing for luxury look */
+  transition: all 0.4s ease;
+  position: relative;
+}
+
+/* Styling for just the N with a vibrant gradient */
+.logo-n {
+  background: linear-gradient(45deg, #9B59B6, #3498DB); /* Vibrant purple to deep blue gradient */
+  -webkit-background-clip: text;
+  color: transparent; /* Make the text transparent to show the gradient */
+  background-clip: text;
+  font-weight: 800; /* Slightly bolder for emphasis */
+  text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.5); /* Light shadow for depth */
+}
+/* Adding a refined gold glow effect */
+.logo::before {
+  content: ''; 
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 215, 0, 0.1); /* Subtle golden glow */
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 0.4s ease;
+  z-index: -1;
+}
+
+/* Hover effect with glow and shadow */
+.logo:hover {
+  transform: scale(1.08); /* Slight enlarge effect */
+  text-shadow: 2px 4px 6px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+}
+
+.logo:hover::before {
+  transform: translate(-50%, -50%) scale(1.5); /* Glow expands on hover */
+  background: rgba(255, 215, 0, 0.3); /* Brighter gold glow */
+}
+/* Styling for THRE3 with the soft gold gradient */
+.logo-thre3 {
+  font-family: 'Playfair Display', serif; /* Elegant and luxurious font */
+  font-weight: 700; /* Medium weight for a luxurious look */
+  font-size: 1.25rem; /* Adjusted for 'text-xl' (equivalent to 20px) */
+  background: linear-gradient(45deg, #D4AF37, #F1C40F, #E5C100); /* Soft gold gradient */
+  -webkit-background-clip: text; /* Clip the gradient to the text */
+  color: transparent; /* Make the text transparent to show the gradient */
+  background-clip: text; /* Ensure the gradient is clipped to the text */
+  text-decoration: none; /* No underline */
+  letter-spacing: 1.5px; /* Elegant spacing for a luxurious look */
+}
+
+/* Styling for the N with a vibrant purple to blue gradient */
+.logo-n {
+  font-family: 'Playfair Display', serif;
+  font-weight: 800; /* Slightly bolder for emphasis */
+  font-size: 1.25rem; /* Matching size for the THRE3 text */
+  background: linear-gradient(45deg, #9B59B6, #3498DB); /* Vibrant purple to blue gradient */
+  -webkit-background-clip: text; /* Clip the gradient to the text */
+  color: transparent; /* Make the text transparent to show the gradient */
+  background-clip: text;
+}
+.donation-message {
+  background-color: #fdf2f2; /* light pink background */
+  color: #b91c1c; /* darker red text */
+  font-weight: bold;
+  padding: 8px 12px;
+  border: 1px solid #fca5a5; /* light red border */
+  border-radius: 8px;
+  margin-top: 16px;
+  max-width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  font-size: 0.9rem; /* suitable for different screen sizes */
+}
+.highlight-title {
+  color: #0c4a6e; /* dark blue color for the title */
+  font-weight: bold;
+  text-decoration: underline; /* subtle underline */
+  text-decoration-color: #a1e3ff; /* light blue underline */
+  text-underline-offset: 3px;
+}
+
+.highlight-text {
+  color: #b91c1c; /* bold red for emphasis */
+  font-weight: bold;
+  font-style: italic;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* slight shadow for depth */
+}
+
+  @media (max-width:640px) {
+    a.active{
+        background-color: black;
+        color: white;
+    }
+  }
